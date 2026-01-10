@@ -231,6 +231,7 @@ $(document).ready(function () {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
+            $('#alert-wrapper').html(alert_markup('danger', 'Your invite code is accepted.'));
         }
     });
 
@@ -240,9 +241,7 @@ $(document).ready(function () {
 // Google map
 function initMap() {
     var location = {lat: -33.836468, lng: 151.258098};
-    const { Map } = await google.maps.importLibrary("maps");
-    //var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    var map = Map(document.getElementById('map-canvas'), {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
         scrollwheel: false
