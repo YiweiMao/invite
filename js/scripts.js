@@ -197,7 +197,7 @@ $(document).ready(function () {
             end: new Date('Jul 18, 2026 22:30'),
 
             // Event Address
-            address: "Gunner's Barracks, Mosman"
+            address: "Gunner's Barracks, Mosman",
 
             // Event Description
             description: "We can't wait to see you on our big day!"
@@ -243,7 +243,6 @@ function initMap() {
     var location = {lat: -33.836468, lng: 151.258098};
     //const { Map } = await google.maps.importLibrary("maps");
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    var map = Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
         scrollwheel: false
