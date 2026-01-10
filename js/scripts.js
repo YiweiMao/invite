@@ -240,8 +240,14 @@ $(document).ready(function () {
 /********************** Extras **********************/
 // Google map
 function initMap() {
+    
+    var map = L.map('map').setView([-33.836468, 151.258098], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker([-33.836468, 151.258098]).addTo(map)
+    /*
     var location = {lat: -33.836468, lng: 151.258098};
-    //const { Map } = await google.maps.importLibrary("maps");
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -252,6 +258,7 @@ function initMap() {
         position: location,
         map: map
     });
+    */
 }
 
 function initBBSRMap() {
