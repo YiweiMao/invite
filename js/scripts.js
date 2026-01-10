@@ -206,7 +206,7 @@ $(document).ready(function () {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
-            $('#alert-wrapper').html(alert_markup('success', 'Your invite code is accepted!'));
+            $('#alert-wrapper').html(alert_markup('success', 'Your invite code is accepted!!!'));
         }
     });
 
